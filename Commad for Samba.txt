@@ -1,0 +1,31 @@
+The commands are...
+sudo apt-get install samba
+
+cd /
+
+sudo mkdir realname
+
+sudo chown techno:techno realname
+
+ls -l
+
+sudo smbpasswd -a techno
+
+sudo vim /etc/samba/smb.conf
+
+[sharedname]
+path = /realname
+available = yes
+valid users = techno
+read only = no
+browsable = yes
+public = yes
+writable = yes
+
+sudo /etc/init.d/samba restart
+
+ifconfig
+
+cd sharename
+
+ls -l
